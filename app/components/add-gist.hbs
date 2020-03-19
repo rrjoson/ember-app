@@ -1,0 +1,10 @@
+{{yield}}
+<div>THIS IS THE GIST COMPONENT</div>
+<input value={{this.description}} onchange={{action (mut this.description) value="target.value"}} />
+<div>{{this.description}}</div>
+<button onclick={{action this.addFile this.description}}>SUBMIT</button>
+<div>
+  {{#each this.shownGists as |item|}}
+  <div>{{item}}</div>
+  {{/each}}
+</div>
